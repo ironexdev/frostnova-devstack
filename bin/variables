@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# User
+export USER_ID=$(id -u)
+export GROUP_ID=$(id -u)
+
+# Devstack
+export FROSTNOVA_DIRECTORY=$(pwd)
+
+# Docker
+export DOCKER_BIN_DIRECTORY=${FROSTNOVA_DIRECTORY}/bin/docker
+export DOCKER_DIRECTORY=${FROSTNOVA_DIRECTORY}/docker
+export DOCKER_SECRET_DIRECTORY=${DOCKER_DIRECTORY}/secrets
+export DOCKER_IMAGE_CONTEXT_PATH=docker/images # Used in Dockerfiles as relative path to the context (FROSTNOVA_DIRECTORY)
+
+# App
+export APP_CONTEXT_PATH=app # Used in Dockerfiles as relative path to the context (FROSTNOVA_DIRECTORY)
+export APP_DIRECTORY=${FROSTNOVA_DIRECTORY}/${APP_CONTEXT_PATH}
+export APP_GENERATED_DIRECTORY=${APP_DIRECTORY}/generated
+
+# Var
+export VAR_DIRECTORY=${DOCKER_DIRECTORY}/var
+
+# Logs
+export LOG_DIRECTORY=${VAR_DIRECTORY}/log
+export APP_LOG_DIRECTORY=${LOG_DIRECTORY}/app
+export HTTP_PROXY_LOG_DIRECTORY=${LOG_DIRECTORY}/http-proxy

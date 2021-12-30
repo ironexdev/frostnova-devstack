@@ -1,0 +1,6 @@
+[submodule "docker"]
+	path = docker
+	url = git@github.com:ironexdev/frostnova-docker.git
+[submodule "app"]
+	path = app
+	url = git@github.com:ironexdev/frostnova-app.git

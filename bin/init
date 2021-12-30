@@ -1,0 +1,12 @@
+#!/bin/sh
+
+while true; do
+    read -p "Do you want to pull submodules and add a symlink to docker/bin Y/n?" yn
+    case $yn in
+        [Nn]* ) break;;
+        * )
+          git submodule update --recursive --remote --init
+          ln -s $(pwd)/docker/bin $(pwd)/bin/docker;
+          break;;
+    esac
+done
