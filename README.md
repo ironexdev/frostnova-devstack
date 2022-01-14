@@ -2,6 +2,10 @@
 
 Docker development stack for a micro PHP framework [Frostnova](https://github.com/ironexdev/frostnova-app)
 
+It contains two rootless containers
+- (Alpine) PHP-FPM container for the app
+- (Alpine) Nginx container that serves as http-proxy to the app
+
 ## How to init development environment
 
 1) Run `git clone git@github.com:ironexdev/frostnova.git`
@@ -14,7 +18,7 @@ Docker development stack for a micro PHP framework [Frostnova](https://github.co
 - Or customize the url in docker/images/http-proxy/default.conf
 
 4) Generate Secrets
-- Base version does not contain any secrets so this step is not needed
+- Base version does not contain any secrets so this step is not needed, but it can be useful after adding database to the project.
 - `bin/docker/compose/secrets`
 - This command will complain "No such file or directory", but files with secrets should be created anyway.
 
