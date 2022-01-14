@@ -16,7 +16,6 @@ export DOCKER_IMAGE_CONTEXT_PATH=docker/images # Used in Dockerfiles as relative
 # App
 export APP_CONTEXT_PATH=app # Used in Dockerfiles as relative path to the context (FROSTNOVA_DIRECTORY)
 export APP_DIRECTORY=${FROSTNOVA_DIRECTORY}/${APP_CONTEXT_PATH}
-export APP_GENERATED_DIRECTORY=${APP_DIRECTORY}/generated
 
 # Var
 export VAR_DIRECTORY=${DOCKER_DIRECTORY}/var
