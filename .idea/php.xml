@@ -44,6 +44,7 @@
       <path value="$PROJECT_DIR$/app/vendor/psr/http-server-middleware" />
       <path value="$PROJECT_DIR$/app/vendor/psr/http-server-handler" />
       <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/serializable-closure" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
